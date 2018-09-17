@@ -12,7 +12,6 @@ Before you can use Homestead, you need to install and configure Vagrant and Home
 
 Resources:
 - [Using Laravel with Homestead/Vagrant](https://laravel.com/docs/5.7/homestead)
-- [Homestead documentation](http://laravel.com/docs/homestead#installation-and-setup)
 
 **This test requires:**
 - access to the internet
@@ -20,7 +19,6 @@ Resources:
 - working setup of PHP 7.1.3+ *(https://laravel.com/docs/5.7/installation#server-requirements)*
 - composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
 - mongoDB *(https://docs.mongodb.com/manual/installation/)*
-- nginx or alternative simple web server
 
 **Good luck!**
 
