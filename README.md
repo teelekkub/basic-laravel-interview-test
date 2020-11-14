@@ -62,12 +62,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Command Run
 
-Test Command
-php artisan BiosService:Test {contributionName}
+Test Command : php artisan BiosService:Test {contributionName}
 
-Unit Test
-php artisan test
+Unit Test : php artisan test
 
-Run Server
-php artisan serve
+Run Server : php artisan serve
 
