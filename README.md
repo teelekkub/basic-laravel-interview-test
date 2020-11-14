@@ -1,102 +1,61 @@
-# Basic PHP and Laravel interview
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-Dear candidate, please follow this readme and solve all questions.
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-> Before you can start, you should prepare your development environment.
+## About Laravel
 
-**Using Laravel with Homestead/Vagrant**
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-In order to develop a Symfony application, you might want to use a virtual development environment instead of the built-in server or WAMP/LAMP. Homestead is an easy-to-use Vagrant box to get a virtual environment up and running quickly.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Before you can use Homestead, you need to install and configure Vagrant and Homestead as explained in the Homestead documentation.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-Resources:
-- [Using Laravel with Homestead/Vagrant](https://laravel.com/docs/5.7/homestead)
+## Learning Laravel
 
-**This test requires:**
-- access to the internet
-- an php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
-- working setup of PHP 7.1.3+ *(https://laravel.com/docs/5.7/installation#server-requirements)*
-- composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
-- mongoDB *(https://docs.mongodb.com/manual/installation/)*
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-**Good luck!**
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
+## Laravel Sponsors
 
---------
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
+### Premium Partners
 
-## Test tasks:
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[OP.GG](https://op.gg)**
 
-1. Change the text on laravel homepage from "Laravel" to "This is a test"
+## Contributing
 
-1. Run the PhpUnit test. Check if there are any errors, if so fix them.
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-1. Create a method hello under App\Controllers\InterviewController
-  * for route `/hello`
-  * with a proper json return `{"hello":"world!"}`
+## Code of Conduct
 
-1. Create a "Bios" collection and load the example data into your MongoDB server
-  * copy the json string from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-1. Define "Bios" model under namespace App\Models
+## Security Vulnerabilities
 
-1. Define "Bios" repository under namespace App\Repositories
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-1. Implement following repository methods
-  * findByFirstName($firstName)
-  * findByContribution($contributionName)
-  * findByDeadBefore($year)
+## License
 
-1. Define and create a service "BiosService" under namespace App/Services and implement following methods
-  * getAllAwards()
-  * Use the logger to log operations (error, warning, debug)
-
-1. Create ContributionsController under namespace App\Controllers\ContributionsController
-
-1. Add a contributionsAction method to your ContributionsController
-  * for route `/contributions`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all contributions
-  * with a proper json return `["contrib", ...]`
-
-1. Add a biosByContributionAction method to your ContributionsController
-  * for route `/contributions/{contributionName}`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all bios documents with provided contribution
-  * with a proper json return `[{...}]`
-
-1. make a unit test for the controller
-  * check if route `/hello` has response code 200
-  * check if route `/hello` response is a json
-  * check if route `/contributions` has response code 200
-  * check if route `/contributions/fake` has response code 404
-  * check if route `/contributions/OOP` has response code 200
-  
-1. make a unit test for the BiosService
-  * at least 1 method of your choice
-
-1. write a command called `test:command` that should accept 1 argument called id under namespace App\Console\Commands
-  * The command should check if a Bios document with an id of the argument exists
-  * if document exists, return info "document exists"
-  * if document doesnt exist, return error "document doesnt exist"
-
-
-## Bonus tasks
-
-1. Check the laravel application for errors and fix them if any.
-
-1. write a prompt for the command `test:command`
-  * Prompt text is "This is a test. Do you want to continue (y/N) ?"
-  * If you decline, return error "Nothing done. Exiting..."
-  * If you accept, run the command
-
-3. Create a single page Vuejs application
-  * for route '/vuejs'
-  * show contribution list
-  * show contribution detail
-
-# That's it!
-## Thank you for your participation! Good luck submitting your results!
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
